@@ -1,9 +1,9 @@
-import { DefaultDocumentNodeContext, StructureBuilder, StructureResolver } from 'sanity/desk';
+import { DefaultDocumentNodeContext, StructureBuilder, StructureResolver } from 'sanity/structure';
 import { PreviewIFrame } from '@/sanity/preview/Preview';
 import { dynamicPage } from '@/sanity/schemas/dynamicPage';
 import config from '@/sanity/config';
 
-export const deskStructure: StructureResolver = (S) => {
+export const structure: StructureResolver = (S) => {
   return S.defaults();
 };
 

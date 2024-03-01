@@ -15,6 +15,7 @@ export const useQuery = <QueryResponseResult = unknown, QueryResponseError = unk
   params?: QueryParams,
   options?: UseQueryOptions<QueryResponseResult>,
 ) => {
+  // @ts-expect-error
   const snapshot = queryStore.useQuery<QueryResponseResult, QueryResponseError>(query, params, options);
 
   const encodeDataAttribute = useEncodeDataAttribute(snapshot.data, snapshot.sourceMap, '/admin');

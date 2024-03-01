@@ -10,18 +10,7 @@ import { DynamicPagePayload } from '@focusreactive/cms-kit';
 
 const serverClient = client.withConfig({
   token: sanityReadToken,
-  stega: {
-    // Enable stega if it's a Vercel preview deployment, as the Vercel Toolbar has controls that shows overlays
-
-    studioUrl: '/admin',
-    enabled: true,
-    filter: (props) => {
-      if (['bgColor', 'sectionConfig'].find((key) => props.sourcePath.includes(key))) {
-        return false;
-      }
-      return props.filterDefault(props);
-    },
-  },
+  stega: true,
 });
 
 /**
