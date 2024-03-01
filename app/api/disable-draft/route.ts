@@ -1,10 +1,8 @@
-import { draftMode } from 'next/headers';
-import { redirect } from 'next/navigation';
+import { draftMode } from 'next/headers'
+import { NextRequest, NextResponse } from 'next/server'
 
-export async function GET(request: Request) {
-  const draft = draftMode();
-
-  draft.disable();
-
-  return redirect('/');
+export function GET(request: NextRequest) {
+  draftMode().disable()
+  const url = new URL(request.nextUrl)
+  return NextResponse.redirect(new URL('/', url.origin))
 }

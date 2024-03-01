@@ -3,7 +3,7 @@ import { AiOutlineReload } from 'react-icons/ai';
 import { BiLinkExternal } from 'react-icons/bi';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { resolvePreviewUrl } from './resolvePreviewUrl';
-import { UserViewComponent } from 'sanity/desk';
+import { UserViewComponent } from 'sanity/structure';
 import debounce from 'lodash.debounce';
 
 export const PreviewIFrame: UserViewComponent = (props) => {

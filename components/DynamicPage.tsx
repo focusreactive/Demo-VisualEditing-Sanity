@@ -21,6 +21,8 @@ export const DynamicPage = ({
     return (
       <>
         <PreviewPage initial={initial} params={{ slug: pageSlug }} />
+        {/* If it loads conditionally, uncomment the draft mode check inside */}
+        {/*{isDraftMode && <VisualEditing />}*/}
         <VisualEditing />
       </>
     );
